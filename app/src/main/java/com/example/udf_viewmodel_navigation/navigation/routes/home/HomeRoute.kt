@@ -20,6 +20,7 @@ fun HomeRoute(
         leftSwipes = state.leftSwipes,
         rightSwipes = state.rightSwipes,
         cardsToLearn = state.cardsToLearn,
+        words = state.words,
         onLearnClick = {
             viewModel.onAction(HomeAction.LearnClicked)
             onNavigateToLearn()
@@ -27,6 +28,7 @@ fun HomeRoute(
         onAddWordClick = {
             viewModel.onAction(HomeAction.AddClicked)
             onNavigateToAdd()
-        }
+        },
+
     )
 }

@@ -22,14 +22,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.udf_viewmodel_navigation.model.Word
 
 @Composable
 fun HomeScreen(
     leftSwipes: Int,
     rightSwipes: Int,
     cardsToLearn: Int,
+    words: List<Word>,
     onLearnClick: () -> Unit,
-    onAddWordClick: () -> Unit
+    onAddWordClick: () -> Unit,
 )
 {
     Box(modifier = Modifier.fillMaxSize())
@@ -73,6 +75,7 @@ fun HomeScreen(
             ) {
                 Icon(imageVector = Icons.Default.Add, contentDescription = "Add word")
             }
+            WordList(words = words)
         }
     }
 }
@@ -84,6 +87,7 @@ fun HomeScreenPreview() {
         leftSwipes = 12,
         rightSwipes = 30,
         cardsToLearn = 18,
+        words = emptyList(),
         onLearnClick = {},
         onAddWordClick = {}
     )
