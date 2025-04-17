@@ -1,4 +1,4 @@
-package com.example.udf_viewmodel_navigation.ui.screens
+package com.example.udf_viewmodel_navigation.ui.screens.homescreen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
